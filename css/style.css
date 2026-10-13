@@ -1,0 +1,102 @@
+/* CSS faylni bo'limlarga ajratish va o'zgaruvchilar */
+:root {
+  --asosiy-rang: #1f3a5f;
+  --ikkilamchi-rang: #e07a5f;
+  --fon-rangi: #f4f6f9;
+  --oq-rang: #ffffff;
+  --matn-rangi: #333333;
+}
+
+/* Asosiy teglarga uslub berish */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--fon-rangi);
+  color: var(--matn-rangi);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Sarlavhalar va matnlar */
+h1, h2, h3 {
+  color: var(--asosiy-rang);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  font-style: normal;
+}
+
+/* Klass va ID selektorlari */
+.izoh {
+  background-color: #fef1ec;
+  border-left: 4px solid var(--ikkilamchi-rang);
+  padding: 10px;
+  font-style: italic;
+}
+
+#aloqa {
+  background-color: var(--oq-rang);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Guruhlangan selektorlar */
+h2, h3 {
+  border-bottom: 2px solid var(--ikkilamchi-rang);
+  padding-bottom: 5px;
+}
+
+/* Avlod selektori (navigatsiya havolalari uchun) */
+nav ul {
+  list-style-type: none;
+  background-color: var(--asosiy-rang);
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Havolalar holati (a, a:hover, a:visited) */
+a {
+  color: var(--ikkilamchi-rang);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #723d46;
+}
+
+a:hover {
+  color: #f2cc8f;
+  text-decoration: none;
+}
