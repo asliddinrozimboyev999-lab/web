@@ -5,93 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Xorazm avtomobil e'lonlari sayti haqida batafsil ma'lumot va muallif sahifasi.">
     <title>Batafsil - Xorazm Avto</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Tashqi CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-    <!-- Navigatsiya menyusi -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Bosh sahifa</a></li>
-            <li><a href="batafsil.html">Batafsil va E'lon berish</a></li>
-            <li><a href="#aloqa">Aloqa</a></li>
-        </ul>
-    </nav>
+<body id="top">
 
     <header>
-        <h1>E'lon berish qoidalari va batafsil ma'lumot</h1>
+        <div class="container header-flex">
+            <div class="logo">Xorazm Avto</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="batafsil.html" class="active">Batafsil</a></li>
+                    <li><a href="aloqa.html">E'lon berish</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Sayt haqida umumiy ma'lumot</h2>
-            <p>Urganch shahrida avtomobil oldi-sotdisini raqamlashtirish maqsadida ushbu <strong>veb-loyiha</strong> ishlab chiqildi[cite: 3].</p>
-            <p>Har bir foydalanuvchi o'z e'lonini to'g'ri va tez joylashtirishi uchun barcha sharoitlar muhayyo qilingan.</p>
-            <p class="izoh">Eslatma: E'lon berish formasi keyingi amaliy darslarda to'liq shakllantiriladi va JavaScript yordamida jonlantiriladi[cite: 2].</p>
-            <p>Avtomobil tezligi 120 km/soat dan oshmasligi lozim, chunki xavfsizlik <em>birinchi o'rinda</em> turadi.</p>
-            <p>Yo'llarda harakatlanish qoidalariga rioya qilish har bir haydovchining asosiy burchidir.</p>
-        </section>
+    <div class="container main-layout">
+        <main>
+            <article>
+                <h2>E'lon berish qoidalari va batafsil ma'lumot</h2>
+                <p>Urganch shahrida avtomobil oldi-sotdisini raqamlashtirish maqsadida ushbu <strong>veb-loyiha</strong> ishlab chiqildi.</p>
+                <p>Har bir foydalanuvchi o'z e'lonini to'g'ri va tez joylashtirishi uchun barcha sharoitlar muhayyo qilingan.</p>
+                <p class="izoh">Eslatma: E'lon berish formasi maxsus sahifada to'liq shakllantirilgan va ishga tushirilgan.</p>
+                <p>Avtomobil tezligi 120 km/soat dan oshmasligi lozim, chunki xavfsizlik <em>birinchi o'rinda</em> turadi.</p>
+                <p>Yo'llarda harakatlanish qoidalariga rioya qilish har bir haydovchining asosiy burchidir.</p>
 
-        <section>
-            <h2>Xavfsizlik va kafolatlar</h2>
-            <blockquote>"Sifatli xizmat — mijozlarimizning doimiy mamnuniyatidir."</blockquote>
-            <p>Viloyatimizdagi <abbr title="Yandeks Go Urganch filiali">Yandex</abbr> hamkorlik markazlari bilan ham aloqadamiz.</p>
-            
-            <h3>Afzalliklarimiz ro'yxati:</h3>
-            <ul>
-                <li>Tekor va qulay interfeys</li>
-                <li>Ishonchli xaridorlar bazasi</li>
-                <li>Xorazm bo'ylab keng qamrov</li>
-            </ul>
+                <!-- A10. Media rasmlar figure + figcaption bilan -->
+                <h3>Avtomobil bozoridan lavhalar</h3>
+                <div class="media-container">
+                    <figure>
+                        <img src="https://via.placeholder.com/450x300/1f3a5f/ffffff?text=Cobalt+Avto" alt="Oq rangdagi zamonaviy Cobalt avtomobili">
+                        <figcaption>1-rasm: Urganch avtomobil bozoridagi yangi modellar.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://via.placeholder.com/450x300/e07a5f/ffffff?text=Xorazm+Avto" alt="Avtomobil salonining ichki ko'rinishi">
+                        <figcaption>2-rasm: Avtomobillarning qulay interyeri va boshqaruv paneli.</figcaption>
+                    </figure>
+                </div>
 
-            <h3>E'lon berish bosqichlari</h3>
-            <ol>
-                <li>Shaxsiy kabinetga kirish</li>
-                <li>Mashina ma'lumotlarini to'ldirish</li>
-                <li>Rasmlarni yuklash</li>
-            </ol>
-        </section>
+                <!-- A11. YouTube Iframe -->
+                <h3>Tanishtiruv Video Lavhasi</h3>
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/d8T8TlAfDd8" title="Xorazm Avto taqdimot va sharh videosi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <!-- Atamalar ro'yxati dl -->
-        <section>
-            <h2>Texnik tushunchalar</h2>
-            <dl>
-                <dt>Dvigatel</dt>
-                <dd>Yoqilg'i energiyasini mexanik energiyaga aylantirib beruvchi asosiy qism.</dd>
+                <!-- B11. Gorizontal va vertikal markazlashtirilgan element -->
+                <div class="center-box">
+                    <p><strong>Eslatma:</strong> Barcha e'lonlar qonunchilik va xavfsizlik talablariga javob berishi shart.</p>
+                </div>
+            </article>
+
+            <section>
+                <h2>Xavfsizlik va kafolatlar</h2>
+                <blockquote>"Sifatli xizmat — mijozlarimizning doimiy mamnuniyatidir."</blockquote>
+                <p>Viloyatimizdagi <abbr title="Yandeks Go Urganch filiali">Yandex</abbr> hamkorlik markazlari bilan ham aloqadamiz.</p>
                 
-                <dt>Injektor</dt>
-                <dd>Yoqilg'ini silindrga purkashni ta'minlaydigan elektron boshqariladigan tizim.</dd>
-                
-                <dt>Podveska (Osma summa)</dt>
-                <dd>G'ildiraklarning karkas bilan bog'lanishini ta'minlab, tebranishlarni yumshatadi.</dd>
-            </dl>
-        </section>
+                <h3>Afzalliklarimiz ro'yxati:</h3>
+                <ul>
+                    <li>Tezkor va qulay interfeys</li>
+                    <li>Ishonchli xaridorlar bazasi</li>
+                    <li>Xorazm bo'ylab keng qamrov</li>
+                </ul>
 
-        <section>
-            <h2>Tashqi manbalar</h2>
-            <p>Jahon avtomobilsozlik yangiliklarini o'qish uchun <a href="https://www.autonews.com" target="_blank" rel="noopener">AutoNews rasmiy saytiga</a> o'ting[cite: 3].</p>
-            <p>Matematik va statistik ko'rsatkichlar: hajm 500 m<sup>3</sup> va harorat 30&deg;C atrofida bo'lishi mumkin &copy; 2026[cite: 3].</p>
-        </section>
+                <h3>E'lon berish bosqichlari</h3>
+                <ol>
+                    <li>Shaxsiy kabinetga kirish</li>
+                    <li>Mashina ma'lumotlarini to'ldirish</li>
+                    <li>Rasmlarni yuklash</li>
+                </ol>
+            </section>
 
-        <!-- Muallif haqida qismi (Talab qilingan) -->
-        <section id="muallif">
-            <h2>Muallif haqida</h2>
-            <p><strong>Ism-familiyangiz:</strong> [Ismingizni yozing]</p>
-            <p><strong>Guruhigiz:</strong> [Guruhingizni yozing, masalan: 512-23]</p>
-            <p><strong>Nima uchun shu mavzuni tanladingiz:</strong> Xorazm viloyatida avtomobil bozorini raqamlashtirish, zamonaviy veb-texnologiyalar yordamida fuqarolarga qulaylik yaratish hamda e'lon berish jarayonini avtomatlashtirish qiziqarli bo'lgani uchun ushbu mavzu tanlandi[cite: 3, 4].</p>
-        </section>
-    </main>
+            <!-- Atamalar ro'yxati dl -->
+            <section>
+                <h2>Texnik tushunchalar</h2>
+                <dl>
+                    <dt>Dvigatel</dt>
+                    <dd>Yoqilg'i energiyasini mexanik energiyaga aylantirib beruvchi asosiy qism.</dd>
+                    
+                    <dt>Injektor</dt>
+                    <dd>Yoqilg'ini silindrga purkashni ta'minlaydigan elektron boshqariladigan tizim.</dd>
+                    
+                    <dt>Podveska (Osma summa)</dt>
+                    <dd>G'ildiraklarning karkas bilan bog'lanishini ta'minlab, tebranishlarni yumshatadi.</dd>
+                </dl>
+            </section>
 
-    <!-- Aloqa qismi -->
+            <section>
+                <h2>Tashqi manbalar</h2>
+                <p>Jahon avtomobilsozlik yangiliklarini o'qish uchun <a href="https://www.autonews.com" target="_blank" rel="noopener">AutoNews rasmiy saytiga</a> o'ting.</p>
+                <p>Matematik va statistik ko'rsatkichlar: hajm 500 m<sup>3</sup> va harorat 30&deg;C atrofida bo'lishi mumkin &copy; 2026.</p>
+            </section>
+
+            <!-- Muallif haqida qismi -->
+            <section id="muallif">
+                <h2>Muallif haqida</h2>
+                <p><strong>Ism-familiya:</strong> Asliddin Rozimboyev</p>
+                <p><strong>Guruh:</strong> Dasturiy injiniring 3-kurs talabasi</p>
+                <p><strong>Nima uchun shu mavzuni tanladingiz:</strong> Xorazm viloyatida avtomobil bozorini raqamlashtirish, zamonaviy veb-texnologiyalar yordamida fuqarolarga qulaylik yaratish hamda e'lon berish jarayonini avtomatlashtirish qiziqarli bo'lgani uchun ushbu mavzu tanlandi.</p>
+            </section>
+        </main>
+
+        <aside>
+            <h3>Foydali Maslahatlar</h3>
+            <p>Mashina sotib olayotganda uning texnik holatini mutaxassis ko'rigidan o'tkazing.</p>
+        </aside>
+    </div>
+
+    <a href="#top" class="btn-up" title="Yuqoriga">↑</a>
+
     <footer id="aloqa">
-        <h2>Aloqa ma'lumotlari</h2>
-        <p>Manzil: Urganch shahri,</p>
-        <p>Telefon: <a href="tel:+998xxxxxxxxx">+998 (xx) xxx-xx-xx</a></p>
-        <p>Elektron pochta: <a href="xxxxxxxxxxxxxx">support@xorazmavto.uz</a></p>
-        <p><a href="#top">Sahifa boshiga qaytish (Yuqoriga)</a></p>
+        <div class="container footer-flex">
+            <div class="footer-col">
+                <h4>Xorazm Avto Portali</h4>
+                <p>Manzil: Urganch shahri</p>
+                <p>Telefon: <a href="tel:+998622230000">+998 (62) 223-00-00</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Aloqa va Ma'lumot</h4>
+                <p>Elektron pochta: <a href="mailto:support@xorazmavto.uz">support@xorazmavto.uz</a></p>
+                <p><a href="#top">Sahifa boshiga qaytish (Yuqoriga)</a></p>
+            </div>
+        </div>
     </footer>
 
 </body>

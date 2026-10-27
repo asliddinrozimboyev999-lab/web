@@ -5,92 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Xorazm va Urganch shahridagi eng qulay avtomobil e'lonlari sayti. Mashina sotish va sotib olish.">
     <title>Xorazm Avto - Bosh sahifa</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Tashqi CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-    <!-- Navigatsiya menyusi va havolalar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Bosh sahifa</a></li>
-            <li><a href="batafsil.html">Batafsil va E'lon berish</a></li>
-            <li><a href="#aloqa">Aloqa</a></li>
-        </ul>
-    </nav>
+<body id="top">
 
     <header>
-        <h1>Xorazm Avtomobil E'lonlari Portali</h1>
+        <div class="container header-flex">
+            <div class="logo">Xorazm Avto</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Bosh sahifa</a></li>
+                    <li><a href="batafsil.html">Batafsil</a></li>
+                    <li><a href="aloqa.html">E'lon berish</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Xush kelibsiz!</h2>
-            <p>Urganch shahri va butun Xorazm viloyati bo'yicha eng sara avtomobillarni <strong>qulay narxlarda</strong> toping yoki o'z mashinangizni tez fursatda soting[cite: 3].</p>
-            <p>Bizning <em>asosiy maqsadimiz</em> — xaridor va sotuvchi uchun eng qulay va xavfsiz muhitni yaratishdir.</p>
-            <p class="izoh">Diqqat: Barcha joylashtirilgan e'lonlar moderatorlar tomonidan tekshiriladi va tasdiqlanadi.</p>
-            <p>Mashina narxi 10<sup>2</sup> barobarga oshib ketmasligi uchun bozordagi real talabni o'rganib chiqish muhim.</p>
-            <p>Suvning kimyoviy formulasi H<sub>2</sub>O bo'lganidek, temir tulporingiz uchun ham sifatli moy (antifriz) tanlash muhim.</p>
-        </section>
+    <div class="container main-layout">
+        <main>
+            <section>
+                <h2>Xush kelibsiz!</h2>
+                <p>Urganch shahri va butun Xorazm viloyati bo'yicha eng sara avtomobillarni <strong>qulay narxlarda</strong> toping yoki o'z mashinangizni tez fursatda soting.</p>
+                <p>Bizning <em>asosiy maqsadimiz</em> — xaridor va sotuvchi uchun eng qulay va xavfsiz muhitni yaratishdir.</p>
+                <p class="izoh">Diqqat: Barcha joylashtirilgan e'lonlar moderatorlar tomonidan tekshiriladi va tasdiqlanadi.</p>
+                <p>Mashina narxi 10<sup>2</sup> barobarga oshib ketmasligi uchun bozordagi real talabni o'rganib chiqish muhim.</p>
+                <p>Suvning kimyoviy formulasi H<sub>2</sub>O bo'lganidek, temir tulporingiz uchun ham sifatli moy (antifriz) tanlash muhim.</p>
+            </section>
 
-        <section>
-            <h2>Avtomobil bozorining afzalliklari</h2>
-            <blockquote>"Xorazm avto — ishonchli yo'llar sari sizning ilk qadamingiz!"</blockquote>
-            <p>Biz bilan <abbr title="Avtomobil savdo markazi">ASTM</abbr> standartlari asosida savdo qiling.</p>
-            
-            <!-- Ichma-ich ro'yxat (ul ichida ul) -->
-            <h3>Mavjud xizmatlar turlari:</h3>
-            <ul>
-                <li>Yengil avtomobillar:
-                    <ul>
-                        <li>Sedan (Cobalt, Gentra)</li>
-                        <li>Krossover (Tracker, Captiva)</li>
-                    </ul>
-                </li>
-                <li>Yuk mashinalari va maxsus texnikalar</li>
-                <li>Ehtiyot qismlar savdosi</li>
-            </ul>
+            <!-- Kartalar qatori (Badge absolyut pozitsiyada) -->
+            <section>
+                <h2>Mashhur Avtomobil E'lonlari</h2>
+                <div class="cards-grid">
+                    <article class="card">
+                        <span class="badge">Yangi</span>
+                        <h3>Chevrolet Cobalt</h3>
+                        <p>Yili: 2023, Probeg: 45,000 km. Holati a'lo darajada, metan o'rnatilgan.</p>
+                    </article>
+                    <article class="card">
+                        <span class="badge">-10%</span>
+                        <h3>Chevrolet Gentra</h3>
+                        <p>Yili: 2022, Probeg: 60,000 km. Elegant pozitsiya, hadavoylari zo'r.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Tracker 2 Premier</h3>
+                        <p>Yili: 2024, Probeg: 12,000 km. Full pozitsiya, panoramik tom.</p>
+                    </article>
+                </div>
+            </section>
 
-            <h3>Buyurtma berish tartibi (Tartiblangan ro'yxat)</h3>
-            <ol>
-                <li>Saytda ro'yxatdan o'tish</li>
-                <li>E'lon matni va rasmlarini kiritish</li>
-                <li>Moderatsiyadan o'tkazish</li>
-            </ol>
-        </section>
+            <!-- Jadval (A3, A4, A5 talablari) -->
+            <section>
+                <h2>Avtomobil Narxlari va Xizmatlar Jadvali</h2>
+                <div class="table-responsive">
+                    <table>
+                        <caption>Xorazm avtoserver va bozor ko'rsatkichlari</caption>
+                        <thead>
+                            <tr>
+                                <th>Kategoriya</th>
+                                <th>Xizmat turi</th>
+                                <th>O'rtacha narxi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">Yengil avto (Sedan)</td>
+                                <td>Diagnostika (Injektor/ABS)</td>
+                                <td>100,000 UZS</td>
+                            </tr>
+                            <tr>
+                                <td>Kuzov bo'yash va to'g'rilash</td>
+                                <td>1,500,000 UZS</td>
+                            </tr>
+                            <tr>
+                                <td>Krossoverlar</td>
+                                <td>To'liq moy almashtirish</td>
+                                <td>350,000 UZS</td>
+                            </tr>
+                            <tr>
+                                <td>Yuk mashinalari</td>
+                                <td>Podveska ta'mirlash</td>
+                                <td>800,000 UZS</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: right; font-weight: bold;">Doimiy mijozlarga umumiy chegirma:</td>
+                                <td style="font-weight: bold; color: var(--ikkilamchi-rang);">15% Chegirma</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-        <!-- Atamalar ro'yxati dl -->
-        <section>
-            <h2>Avtomobilsozlik atamalari</h2>
-            <dl>
-                <dt>ABS (Anti-lock Braking System)</dt>
-                <dd>Tormozlanganda g'ildiraklarning qulflanib qolishining oldini oluvchi tizim.</dd>
+            <section>
+                <h2>Avtomobil bozorining afzalliklari</h2>
+                <blockquote>"Xorazm avto — ishonchli yo'llar sari sizning ilk qadamingiz!"</blockquote>
+                <p>Biz bilan <abbr title="Avtomobil savdo markazi">ASTM</abbr> standartlari asosida savdo qiling.</p>
                 
-                <dt>Transmissiya</dt>
-                <dd>Dvigatelning aylanish harakatini g'ildiraklarga uzatib beruvchi mexanizmlar majmui.</dd>
-                
-                <dt>Kuzov</dt>
-                <dd>Avtomobilning yo'lovchilar, yuk joylashtirish hamda qismlarini o'rnatish uchun mo'ljallangan qismi.</dd>
-            </dl>
-        </section>
+                <h3>Mavjud xizmatlar turlari:</h3>
+                <ul>
+                    <li>Yengil avtomobillar:
+                        <ul>
+                            <li>Sedan (Cobalt, Gentra)</li>
+                            <li>Krossover (Tracker, Captiva)</li>
+                        </ul>
+                    </li>
+                    <li>Yuk mashinalari va maxsus texnikalar</li>
+                    <li>Ehtiyot qismlar savdosi</li>
+                </ul>
 
-        <!-- Maxsus belgilar va tashqi havola -->
-        <section>
-            <h2>Foydali havolalar</h2>
-            <p>O'zbekiston Respublikasi avtomobil bozoridagi yangiliklar bilan tanishish uchun <a href="https://gov.uz" target="_blank" rel="noopener">Davlat xizmatlari portaliga</a> tashrif buyuring[cite: 3].</p>
-            <p>Maxsus belgilardan namuna: narxlar 50 &lt; 100 oralig'ida va chegirmalar 20&percnt; tashkil etadi &copy; 2026[cite: 3].</p>
-        </section>
-    </main>
+                <h3>Buyurtma berish tartibi (Tartiblangan ro'yxat)</h3>
+                <ol>
+                    <li>Saytda ro'yxatdan o'tish</li>
+                    <li>E'lon matni va rasmlarini kiritish</li>
+                    <li>Moderatsiyadan o'tkazish</li>
+                </ol>
+            </section>
 
-    <!-- Aloqa qismi (ID selektori uchun) -->
+            <!-- Atamalar ro'yxati dl -->
+            <section>
+                <h2>Avtomobilsozlik atamalari</h2>
+                <dl>
+                    <dt>ABS (Anti-lock Braking System)</dt>
+                    <dd>Tormozlanganda g'ildiraklarning qulflanib qolishining oldini oluvchi tizim.</dd>
+                    
+                    <dt>Transmissiya</dt>
+                    <dd>Dvigatelning aylanish harakatini g'ildiraklarga uzatib beruvchi mexanizmlar majmui.</dd>
+                    
+                    <dt>Kuzov</dt>
+                    <dd>Avtomobilning yo'lovchilar, yuk joylashtirish hamda qismlarini o'rnatish uchun mo'ljallangan qismi.</dd>
+                </dl>
+            </section>
+
+            <!-- Maxsus belgilar va tashqi havola -->
+            <section>
+                <h2>Foydali havolalar</h2>
+                <p>O'zbekiston Respublikasi avtomobil bozoridagi yangiliklar bilan tanishish uchun <a href="https://gov.uz" target="_blank" rel="noopener">Davlat xizmatlari portaliga</a> tashrif buyuring.</p>
+                <p>Maxsus belgilerden namuna: narxlar 50 &lt; 100 oralig'ida va chegirmalar 20&percnt; tashkil etadi &copy; 2026.</p>
+            </section>
+        </main>
+
+        <!-- Aside talabi -->
+        <aside>
+            <h3>Tezkor Statistikalar</h3>
+            <p>Bugungi kunda saytda <strong>1,250 ta</strong> faol avto e'lonlar mavjud.</p>
+            <p style="margin-top: 15px;">Urganch shahar bo'yicha eng ko'p sotilayotgan mashina — Cobalt.</p>
+        </aside>
+    </div>
+
+    <!-- B7. Fixed Yuqoriga tugmasi -->
+    <a href="#top" class="btn-up" title="Yuqoriga">↑</a>
+
+    <!-- Footer (2 ustunli Flexbox) -->
     <footer id="aloqa">
-        <h2>Aloqa ma'lumotlari</h2>
-        <p>Manzil: Urganch shahri, Al-Xorazmiy ko'chasi, 12-uy</p>
-        <p>Telefon: <a href="tel:+998622230000">+998 (62) 223-00-00</a></p>
-        <p>Elektron pochta: <a href="mailto:info@xorazmavto.uz">info@xorazmavto.uz</a></p>
-        <p><a href="#top">Sahifa boshiga qaytish (Yuqoriga)</a></p>
+        <div class="container footer-flex">
+            <div class="footer-col">
+                <h4>Xorazm Avto Portali</h4>
+                <p>Manzil: Urganch shahri, Al-Xorazmiy ko'chasi, 12-uy</p>
+                <p>Telefon: <a href="tel:+998622230000">+998 (62) 223-00-00</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Aloqa va Ma'lumot</h4>
+                <p>Elektron pochta: <a href="mailto:info@xorazmavto.uz">info@xorazmavto.uz</a></p>
+                <p><a href="#top">Sahifa boshiga qaytish (Yuqoriga)</a></p>
+            </div>
+        </div>
     </footer>
 
 </body>

@@ -1,102 +1,363 @@
-/* CSS faylni bo'limlarga ajratish va o'zgaruvchilar */
-:root {
-  --asosiy-rang: #1f3a5f;
-  --ikkilamchi-rang: #e07a5f;
-  --fon-rangi: #f4f6f9;
-  --oq-rang: #ffffff;
-  --matn-rangi: #333333;
+/* B1. Universal box-sizing va reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Asosiy teglarga uslub berish */
+/* O'zgaruvchilar (1-amaliy ishdagi ranglar saqlandi) */
+:root {
+    --asosiy-rang: #1f3a5f;
+    --ikkilamchi-rang: #e07a5f;
+    --fon-rangi: #f4f6f9;
+    --oq-rang: #ffffff;
+    --matn-rangi: #333333;
+    --border-rang: #dddddd;
+}
+
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background-color: var(--fon-rangi);
-  color: var(--matn-rangi);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--fon-rangi);
+    color: var(--matn-rangi);
+    line-height: 1.6;
+}
+
+/* B2. Konteyner */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* B5. Sticky Header va B8. Flexbox Menyusi */
+header {
+    background-color: var(--asosiy-rang);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--oq-rang);
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--oq-rang);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--ikkilamchi-rang);
+}
+
+/* Layout: Main va Aside */
+.main-layout {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+main {
+    flex: 3;
+    min-width: 300px;
+}
+
+aside {
+    flex: 1;
+    min-width: 250px;
+    background: var(--oq-rang);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-rang);
+    height: fit-content;
+}
+
+aside h3 {
+    color: var(--asosiy-rang);
+    border-bottom: 2px solid var(--ikkilamchi-rang);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* Sarlavhalar va matnlar */
 h1, h2, h3 {
-  color: var(--asosiy-rang);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-h1 {
-  font-size: 28px;
-  font-weight: 700;
-  text-align: center;
+    color: var(--asosiy-rang);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 22px;
-  font-weight: 600;
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--ikkilamchi-rang);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 25px;
 }
 
-h3 {
-  font-size: 18px;
-  font-weight: 500;
+/* B3. Kartalar va B9. Flexbox Kartalar Qatori */
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-p {
-  font-size: 16px;
-  font-style: normal;
+.card {
+    flex: 1 1 280px;
+    background: var(--oq-rang);
+    border: 1px solid var(--border-rang);
+    border-radius: 8px;
+    padding: 16px 24px; /* B4. Qisqa yozuv (2 qiymatli padding) */
+    position: relative; /* B6 uchun ota element */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
 }
 
-/* Klass va ID selektorlari */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* B6. Absolute belgi (Badge) */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--ikkilamchi-rang);
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Jadval uslublari (A3, A4, A5) */
+.table-responsive {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--oq-rang);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-rang);
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--asosiy-rang);
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid var(--border-rang);
+    text-align: left;
+}
+
+thead {
+    background-color: var(--asosiy-rang);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--fon-rangi);
+}
+
+/* B12. Forma uslublari (Flexbox column va gap) */
+.form-container {
+    background: var(--oq-rang);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-rang);
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+fieldset {
+    border: 1px solid var(--border-rang);
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+legend {
+    padding: 0 5px;
+    font-weight: bold;
+    color: var(--asosiy-rang);
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    border: 1px solid var(--border-rang);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background-color: var(--asosiy-rang);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--ikkilamchi-rang);
+}
+
+/* Media uslublari (A10, A11) */
+figure {
+    margin: 20px 0;
+    text-align: center;
+    background: var(--oq-rang);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-rang);
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.media-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    border: 1px solid var(--border-rang);
+    margin: 20px 0;
+}
+
+/* B11. Gorizontal va vertikal markazlashtirilgan element */
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    background: #e9ecef;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+    border: 1px dashed var(--asosiy-rang);
+}
+
+/* B7. Fixed Yuqoriga tugmasi */
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--ikkilamchi-rang);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: background 0.3s;
+}
+
+.btn-up:hover {
+    background-color: var(--asosiy-rang);
+}
+
+/* B10. Flexbox Footer (2 ustunli) */
+footer {
+    background: var(--asosiy-rang);
+    color: white;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1 1 250px;
+}
+
+.footer-col h4 {
+    color: var(--ikkilamchi-rang);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-col a {
+    color: #f2cc8f;
+    text-decoration: underline;
+}
+
+.footer-col a:hover {
+    text-decoration: none;
+}
+
+/* Qo'shimcha klasslar */
 .izoh {
-  background-color: #fef1ec;
-  border-left: 4px solid var(--ikkilamchi-rang);
-  padding: 10px;
-  font-style: italic;
-}
-
-#aloqa {
-  background-color: var(--oq-rang);
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 8px;
-}
-
-/* Guruhlangan selektorlar */
-h2, h3 {
-  border-bottom: 2px solid var(--ikkilamchi-rang);
-  padding-bottom: 5px;
-}
-
-/* Avlod selektori (navigatsiya havolalari uchun) */
-nav ul {
-  list-style-type: none;
-  background-color: var(--asosiy-rang);
-  padding: 10px;
-  text-align: center;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* Havolalar holati (a, a:hover, a:visited) */
-a {
-  color: var(--ikkilamchi-rang);
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #723d46;
-}
-
-a:hover {
-  color: #f2cc8f;
-  text-decoration: none;
+    background-color: #fef1ec;
+    border-left: 4px solid var(--ikkilamchi-rang);
+    padding: 10px;
+    font-style: italic;
+    margin: 15px 0;
 }
