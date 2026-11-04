@@ -1,11 +1,17 @@
-/* B1. Universal box-sizing va reset */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* O'zgaruvchilar (1-amaliy ishdagi ranglar saqlandi) */
+
+
+
+
+
+
+
 :root {
     --asosiy-rang: #1f3a5f;
     --ikkilamchi-rang: #e07a5f;
@@ -21,15 +27,11 @@ body {
     color: var(--matn-rangi);
     line-height: 1.6;
 }
-
-/* B2. Konteyner */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/* B5. Sticky Header va B8. Flexbox Menyusi */
 header {
     background-color: var(--asosiy-rang);
     position: sticky;
@@ -70,8 +72,6 @@ nav a {
 nav a:hover, nav a.active {
     color: var(--ikkilamchi-rang);
 }
-
-/* Layout: Main va Aside */
 .main-layout {
     display: flex;
     gap: 30px;
@@ -100,8 +100,6 @@ aside h3 {
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
-
-/* Sarlavhalar va matnlar */
 h1, h2, h3 {
     color: var(--asosiy-rang);
     text-transform: uppercase;
@@ -116,8 +114,6 @@ h2 {
     margin-bottom: 15px;
     margin-top: 25px;
 }
-
-/* B3. Kartalar va B9. Flexbox Kartalar Qatori */
 .cards-grid {
     display: flex;
     flex-wrap: wrap;
@@ -130,8 +126,8 @@ h2 {
     background: var(--oq-rang);
     border: 1px solid var(--border-rang);
     border-radius: 8px;
-    padding: 16px 24px; /* B4. Qisqa yozuv (2 qiymatli padding) */
-    position: relative; /* B6 uchun ota element */
+    padding: 16px 24px; 
+    position: relative; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     transition: transform 0.3s;
 }
@@ -140,7 +136,6 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* B6. Absolute belgi (Badge) */
 .badge {
     position: absolute;
     top: 15px;
@@ -153,7 +148,6 @@ h2 {
     font-weight: bold;
 }
 
-/* Jadval uslublari (A3, A4, A5) */
 .table-responsive {
     overflow-x: auto;
     margin: 20px 0;
@@ -189,8 +183,6 @@ thead {
 tbody tr:nth-child(even) {
     background-color: var(--fon-rangi);
 }
-
-/* B12. Forma uslublari (Flexbox column va gap) */
 .form-container {
     background: var(--oq-rang);
     padding: 25px;
@@ -245,8 +237,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: var(--ikkilamchi-rang);
 }
-
-/* Media uslublari (A10, A11) */
 figure {
     margin: 20px 0;
     text-align: center;
@@ -284,8 +274,6 @@ iframe {
     border: 1px solid var(--border-rang);
     margin: 20px 0;
 }
-
-/* B11. Gorizontal va vertikal markazlashtirilgan element */
 .center-box {
     display: flex;
     justify-content: center;
@@ -298,8 +286,6 @@ iframe {
     text-align: center;
     border: 1px dashed var(--asosiy-rang);
 }
-
-/* B7. Fixed Yuqoriga tugmasi */
 .btn-up {
     position: fixed;
     bottom: 20px;
@@ -318,8 +304,6 @@ iframe {
 .btn-up:hover {
     background-color: var(--asosiy-rang);
 }
-
-/* B10. Flexbox Footer (2 ustunli) */
 footer {
     background: var(--asosiy-rang);
     color: white;
@@ -352,8 +336,6 @@ footer {
 .footer-col a:hover {
     text-decoration: none;
 }
-
-/* Qo'shimcha klasslar */
 .izoh {
     background-color: #fef1ec;
     border-left: 4px solid var(--ikkilamchi-rang);
