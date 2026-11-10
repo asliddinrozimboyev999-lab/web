@@ -5,7 +5,8 @@ function kabisaYili(yil) {
     return false;
 }
 
-console.log(kabisaYili(2024));
-console.log(kabisaYili(1900));
-console.log(kabisaYili(2000));
-console.log(kabisaYili(2023));
+let kiritilganYil = prompt();
+if (kiritilganYil) {
+    let natija = kabisaYili(Number(kiritilganYil));
+    console.log(natija);
+}
