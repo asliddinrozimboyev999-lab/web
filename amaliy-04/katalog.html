@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xorazm Avto - Avtomobillar katalogi, qidiruv va narxlar bo'yicha saralash.">
+    <title>Katalog - Xorazm Avto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">Xorazm Avto</div>
+            <button id="menu-toggle" class="hamburger-btn" aria-label="Menyuni ochish">☰</button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="katalog.html" class="active">Avto Katalog</a></li>
+                    <li><a href="batafsil.html">Batafsil</a></li>
+                    <li><a href="aloqa.html">E'lon berish</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <span class="fav-badge" title="Sevimli avtomobillar">♥ <span id="sevimli-soni">0</span></span>
+                <button id="theme-toggle" class="theme-btn" title="Tungi/Kunduzgi rejim">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <main>
+            <section class="stats-section">
+                <h2>Bozor Statistikasi</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-label">Jami e'lonlar</span>
+                        <strong id="stat-jami" class="stat-value">0 ta</strong>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">O'rtacha narx</span>
+                        <strong id="stat-ortacha" class="stat-value">$0</strong>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Eng qimmat model</span>
+                        <strong id="stat-qimmat" class="stat-value">-</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Avtomobillar Katalogi</h2>
+                <div class="filter-bar">
+                    <input type="text" id="qidiruv-input" placeholder="Model nomi bo'yicha qidirish (masalan: Cobalt)...">
+
+                    <select id="kategoriya-select">
+                        <option value="barchasi">Barcha kategoriyalar</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="krossover">Krossover</option>
+                        <option value="biznes">Biznes klass</option>
+                        <option value="elektromobil">Elektromobil</option>
+                        <option value="tijorat">Tijorat (Yuk/Miniven)</option>
+                    </select>
+
+                    <select id="saralash-select">
+                        <option value="standart">Saralash: Standart</option>
+                        <option value="narx-osish">Narx: Arzondan qimmatga</option>
+                        <option value="narx-kamayish">Narx: Qimmatdan arzonga</option>
+                        <option value="nom-az">Nomi: A dan Z gacha</option>
+                    </select>
+                </div>
+
+                <p class="result-count">Ko'rsatilmoqda: <strong id="topilgan-soni">0</strong> ta avtomobil</p>
+
+                <div id="avto-konteyner" class="cards-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <div id="avto-modal" class="modal-overlay" hidden>
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-nomi">
+            <button id="modal-yopish" class="modal-close" aria-label="Yopish">&times;</button>
+            <img id="modal-rasm" src="" alt="" class="modal-img">
+            <h3 id="modal-nomi"></h3>
+            <p class="modal-price" id="modal-narx"></p>
+            <ul class="modal-specs">
+                <li><strong>Kategoriya:</strong> <span id="modal-kategoriya"></span></li>
+                <li><strong>Ishlab chiqarilgan yili:</strong> <span id="modal-yili"></span></li>
+                <li><strong>Yurgan masofasi (Probeg):</strong> <span id="modal-probeg"></span></li>
+                <li><strong>Yoqilg'i turi:</strong> <span id="modal-yoqilgi"></span></li>
+                <li><strong>Holati:</strong> <span id="modal-holat"></span></li>
+            </ul>
+            <div id="modal-teglar" class="tags-wrap"></div>
+        </div>
+    </div>
+
+    <a href="#top" class="btn-up" title="Yuqoriga">↑</a>
+
+    <footer>
+        <div class="container footer-flex">
+            <div class="footer-col">
+                <h4>Xorazm Avto Portali</h4>
+                <p>Manzil: Urganch shahri, Al-Xorazmiy ko'chasi, 12-uy</p>
+                <p>Telefon: <a href="tel:+998622230000">+998 (62) 223-00-00</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Aloqa va Ma'lumot</h4>
+                <p>Elektron pochta: <a href="mailto:info@xorazmavto.uz">info@xorazmavto.uz</a></p>
+                <p><a href="#top">Sahifa boshiga qaytish (Yuqoriga)</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/katalog.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
