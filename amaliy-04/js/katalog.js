@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("stat-jami").textContent = `${jamiAvtoSoni} ta`;
     document.getElementById("stat-ortacha").textContent = `$${ortachaNarx.toLocaleString()}`;
     document.getElementById("stat-qimmat").textContent = engQimmatAvto
-    ? `${engQimmatAvto.nomi} ($${engQimmatAvto.narx.toLocaleString()})`
-    : "-";
+        ? `${engQimmatAvto.nomi} ($${engQimmatAvto.narx.toLocaleString()})`
+        : "-";
 
     function kartalarniChiqar(royxat) {
         konteyner.textContent = "";
